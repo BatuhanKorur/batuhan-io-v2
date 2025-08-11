@@ -1,8 +1,10 @@
 'use client'
 import { Icon } from '@iconify/react'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
 import { Dock, DockIcon } from '@/components/magicui/dock'
 import { Separator } from '@/components/ui/separator'
+import { SOCIAL_LINKS } from '@/data'
 
 export function Navbar() {
   const { theme, setTheme } = useTheme()
@@ -13,20 +15,28 @@ export function Navbar() {
     >
       <Dock direction="middle" className="pointer-events-auto">
         <DockIcon>
-          <Icon icon="lucide:heart" />
+          <Icon icon="ph:house-bold" className="size-6" />
         </DockIcon>
         <DockIcon>
-          <p>CV</p>
+          <Link href="/cv.pdf" target="_blank" className="font-bold tracking-tighter">
+            CV
+          </Link>
         </DockIcon>
         <Separator orientation="vertical" className="h-full" />
         <DockIcon>
-          <Icon icon="lucide:book" />
+          <Link href={SOCIAL_LINKS.github} target="_blank">
+            <Icon icon="uiw:github" className="size-5" />
+          </Link>
         </DockIcon>
         <DockIcon>
-          <Icon icon="lucide:briefcase" />
+          <Link href={SOCIAL_LINKS.linkedin} target="_blank">
+            <Icon icon="uiw:linkedin" className="size-5" />
+          </Link>
         </DockIcon>
         <DockIcon>
-          <Icon icon="lucide:briefcase" />
+          <Link href={SOCIAL_LINKS.instagram} target="_blank">
+            <Icon icon="lucide:instagram" className="size-5" />
+          </Link>
         </DockIcon>
         <Separator orientation="vertical" className="h-full" />
         <DockIcon
@@ -34,9 +44,9 @@ export function Navbar() {
         >
           {theme === 'dark'
             ? (
-                <Icon icon="ion:moon-outline" />
+                <Icon icon="ion:moon-outline" className="size-5" />
               )
-            : (<Icon icon="ion:sunny-outline" />)}
+            : (<Icon icon="ion:sunny-outline" className="size-5" />)}
         </DockIcon>
       </Dock>
     </div>
