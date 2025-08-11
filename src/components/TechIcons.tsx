@@ -29,7 +29,7 @@ export default function TechIcons() {
       setI(prev => (prev + 1) % ICONS.length)
     }, DELAY)
     return () => clearInterval(id)
-  }, [ICONS.length, DELAY])
+  }, [])
 
   return (
     <div

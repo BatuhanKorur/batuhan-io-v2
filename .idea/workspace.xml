@@ -5,31 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0657f116-a03e-447b-91f0-1c9b55eccfc8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/brickhunter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/dedecta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/okami.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/reachin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/ups.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Providers.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TechIcons.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WorkCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/text.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/resume.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/sitemap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/file.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/globe.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TechIcons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TechIcons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/magicui/dock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/magicui/dock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/avatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/badge.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/separator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/separator.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

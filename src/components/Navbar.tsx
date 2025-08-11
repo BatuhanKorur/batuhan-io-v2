@@ -6,9 +6,6 @@ import { Separator } from '@/components/ui/separator'
 
 export function Navbar() {
   const { theme, setTheme } = useTheme()
-  function toggleTheme() {
-    console.log('Toggling theme')
-  }
   return (
     <div
       aria-label="dock-navigation"

@@ -49,6 +49,7 @@ function Dock({ ref, className, children, iconSize = DEFAULT_SIZE, iconMagnifica
         React.isValidElement<DockIconProps>(child)
         && child.type === DockIcon
       ) {
+        // eslint-disable-next-line react/no-clone-element
         return React.cloneElement(child, {
           ...child.props,
           mouseX,
@@ -138,4 +139,4 @@ function DockIcon({
 
 DockIcon.displayName = 'DockIcon'
 
-export { Dock, DockIcon, dockVariants }
+export { Dock, DockIcon }
