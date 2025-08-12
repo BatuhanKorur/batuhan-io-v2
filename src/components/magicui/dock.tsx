@@ -44,6 +44,7 @@ function Dock({ ref, className, children, iconSize = DEFAULT_SIZE, iconMagnifica
   const mouseX = useMotionValue(Infinity)
 
   const renderChildren = () => {
+    // eslint-disable-next-line react/no-children-map
     return React.Children.map(children, (child) => {
       if (
         React.isValidElement<DockIconProps>(child)
@@ -128,6 +129,7 @@ function DockIcon({
       style={{ width: scaleSize, height: scaleSize, padding }}
       className={cn(
         'flex aspect-square cursor-pointer items-center justify-center rounded-full',
+        'transition duration-150 ease-in-out hover:bg-zinc-800',
         className,
       )}
       {...props}

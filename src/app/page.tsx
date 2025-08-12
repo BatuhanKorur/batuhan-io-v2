@@ -1,10 +1,11 @@
+import ContactCard from '@/components/ContactCard'
 import { Navbar } from '@/components/Navbar'
 import TechIcons from '@/components/TechIcons'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { TextH2, TextH4 } from '@/components/ui/text'
 
+import { TextH2, TextH4 } from '@/components/ui/text'
 import { WorkTrigger } from '@/components/WorkCard'
 import { WORK_EXP } from '@/data/resume'
 
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 mt-5">
           <div>
             <TextH4>Frontend</TextH4>
-            <div>
+            <div className="space-x-3 space-y-3">
               <Badge icon="vscode-icons:file-type-typescript-official">TypeScript</Badge>
               <Badge icon="vscode-icons:file-type-js-official">Javascript</Badge>
               <Badge icon="vscode-icons:file-type-reactjs">React</Badge>
@@ -63,7 +64,7 @@ export default function Home() {
           </div>
           <div>
             <TextH4>Backend</TextH4>
-            <div>
+            <div className="space-x-3 space-y-3">
               <Badge icon="vscode-icons:file-type-node">Node</Badge>
               <Badge icon="vscode-icons:file-type-bun">Bun</Badge>
               <Badge icon="skill-icons:expressjs-dark">Express.js</Badge>
@@ -75,7 +76,7 @@ export default function Home() {
           </div>
           <div>
             <TextH4>Toolbox</TextH4>
-            <div>
+            <div className="space-x-3 space-y-3">
               <Badge icon="skill-icons:docker">Docker</Badge>
               <Badge icon="skill-icons:aws-dark">AWS</Badge>
               <Badge icon="logos:firebase">Firebase</Badge>
@@ -86,11 +87,9 @@ export default function Home() {
         </div>
       </div>
       <Separator />
-      <div className="text-center mb-20">
+      <div className="mb-20">
         <TextH2>Get in Touch</TextH2>
-        <div className="text-center">
-          <p>Some text about contacting is here</p>
-        </div>
+        <ContactCard />
       </div>
       <Navbar />
     </main>
