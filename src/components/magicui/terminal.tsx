@@ -99,7 +99,7 @@ interface TypingAnimationProps extends MotionProps {
 export function TypingAnimation({
   children,
   className,
-  duration = 60,
+  duration = 40,
   delay = 0,
   as: Component = 'span',
   startOnView = true,
@@ -185,7 +185,7 @@ export function TypingAnimation({
   return (
     <MotionComponent
       ref={elementRef}
-      className={cn('text-sm font-normal tracking-tight', className)}
+      className={cn('text-sm font-medium tracking-tight', className)}
       {...props}
     >
       {displayedText}

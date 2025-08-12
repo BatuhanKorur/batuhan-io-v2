@@ -2,8 +2,8 @@ import ContactCard from '@/components/ContactCard'
 import { Navbar } from '@/components/Navbar'
 import TechIcons from '@/components/TechIcons'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { Badge } from '@/components/ui/badge'
 
+import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { TextH2, TextH4 } from '@/components/ui/text'
 import { WorkTrigger } from '@/components/WorkCard'
@@ -40,7 +40,9 @@ export default function Home() {
                 </WorkTrigger>
               </AccordionTrigger>
               <AccordionContent>
-                {exp.description}
+                <p className="text-base leading-6 ml-14 mb-6 -mt-1">
+                  {exp.description}
+                </p>
               </AccordionContent>
             </AccordionItem>
           ))}
@@ -87,8 +89,10 @@ export default function Home() {
         </div>
       </div>
       <Separator />
-      <div className="mb-20">
-        <TextH2>Get in Touch</TextH2>
+      <div className="mb-30">
+        <div className="text-center mb-7">
+          <TextH2>Get in Touch</TextH2>
+        </div>
         <ContactCard />
       </div>
       <Navbar />

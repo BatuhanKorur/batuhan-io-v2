@@ -1,13 +1,12 @@
 'use client'
 import { Icon } from '@iconify/react'
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
+import { AnimatedThemeToggler } from '@/components/magicui/animated-theme-toggler'
 import { Dock, DockIcon } from '@/components/magicui/dock'
 import { Separator } from '@/components/ui/separator'
 import { SOCIAL_LINKS } from '@/data'
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme()
   return (
     <div
       aria-label="dock-navigation"
@@ -41,12 +40,8 @@ export function Navbar() {
           </Link>
         </DockIcon>
         <Separator orientation="vertical" className="h-full" />
-        <DockIcon onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-          {theme === 'dark'
-            ? (
-                <Icon icon="ion:moon-outline" className="size-5" />
-              )
-            : (<Icon icon="ion:sunny-outline" className="size-5" />)}
+        <DockIcon>
+          <AnimatedThemeToggler />
         </DockIcon>
       </Dock>
     </div>

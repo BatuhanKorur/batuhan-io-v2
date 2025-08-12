@@ -8,9 +8,8 @@ import { cn } from '@/lib/utils'
 
 const badgeVariants = cva(
   [
-    'border text-sm font-medium px-2 h-9',
+    'border px-2 h-9 rounded-xl',
     'inline-flex items-center justify-center whitespace-nowrap shrink-0 w-fit',
-    // 'px-3 h-10 text-sm font-medium',
     'focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden',
   ],
   {
@@ -49,8 +48,8 @@ function Badge({
       className={cn(badgeVariants({ variant }), className)}
       {...props}
     >
-      { icon && <Icon icon={icon} className="inline-block size-[18px] mr-2" /> }
-      <span className="pt-px">
+      { icon && <Icon icon={icon} className="inline-block size-[18px]" /> }
+      <span className="pt-px text-[13px] font-[550] pl-2 pr-1.5">
         { props.children }
       </span>
     </Comp>
