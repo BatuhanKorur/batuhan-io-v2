@@ -1,5 +1,4 @@
 'use client'
-
 import type { VariantProps } from 'class-variance-authority'
 import type {
   MotionProps,
@@ -14,8 +13,11 @@ import {
   useTransform,
 } from 'motion/react'
 import React, { useRef } from 'react'
-
 import { cn } from '@/lib/utils'
+
+const DEFAULT_SIZE = 40
+const DEFAULT_MAGNIFICATION = 50
+const DEFAULT_DISTANCE = 140
 
 export interface DockProps extends VariantProps<typeof dockVariants> {
   className?: string
@@ -26,21 +28,24 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   children: React.ReactNode
 }
 
-const DEFAULT_SIZE = 40
-const DEFAULT_MAGNIFICATION = 60
-const DEFAULT_DISTANCE = 140
-
 const dockVariants = cva(
   [
-    'backdrop-blur-xl',
-    'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10',
-    'px-2 h-14 flex items-center justify-center gap-2',
     'rounded-2xl border',
-
+    'px-2 h-14 flex items-center justify-center gap-2',
+    'backdrop-blur-xl supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10',
   ],
 )
 
-function Dock({ ref, className, children, iconSize = DEFAULT_SIZE, iconMagnification = DEFAULT_MAGNIFICATION, iconDistance = DEFAULT_DISTANCE, direction = 'middle', ...props }: DockProps & { ref?: React.RefObject<HTMLDivElement | null> }) {
+function Dock({
+  ref,
+  className,
+  children,
+  iconSize = DEFAULT_SIZE,
+  iconMagnification = DEFAULT_MAGNIFICATION,
+  iconDistance = DEFAULT_DISTANCE,
+  direction = 'middle',
+  ...props
+}: DockProps & { ref?: React.RefObject<HTMLDivElement | null> }) {
   const mouseX = useMotionValue(Infinity)
 
   const renderChildren = () => {
@@ -129,7 +134,7 @@ function DockIcon({
       style={{ width: scaleSize, height: scaleSize, padding }}
       className={cn(
         'flex aspect-square cursor-pointer items-center justify-center rounded-full',
-        'transition duration-150 ease-in-out hover:bg-zinc-800',
+        'transition duration-150 ease-in-out hover:bg-foreground/10',
         className,
       )}
       {...props}

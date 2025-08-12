@@ -14,8 +14,8 @@ export function WorkTrigger({ title, logo, date, position }: {
       </Avatar>
       <div className="w-full">
         <div className="flex items-center justify-between">
-          <p className="text-[15px] font-semibold">{ title }</p>
-          <p className="text-[15px] opacity-80">{ date }</p>
+          <p className="text-[15px] font-semibold text-foreground">{ title }</p>
+          <p className="text-[15px] text-muted-foreground">{ date }</p>
         </div>
         <p className="text-[15px] text-muted-foreground">{ position }</p>
       </div>

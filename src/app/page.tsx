@@ -1,31 +1,34 @@
 import ContactCard from '@/components/ContactCard'
+import { AuroraText } from '@/components/magicui/aurora-text'
 import { Navbar } from '@/components/Navbar'
 import TechIcons from '@/components/TechIcons'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { TextH2, TextH4 } from '@/components/ui/text'
+import { TextH2, TextH3 } from '@/components/ui/text'
 import { WorkTrigger } from '@/components/WorkCard'
-import { WORK_EXP } from '@/data/resume'
+import { DESCRIPTION, TECH_SECTIONS, WORK_EXP } from '@/data'
 
 export default function Home() {
   return (
     <main className="flex flex-col space-y-10">
-      <div>
-        <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl">Hello, I'm Batuhan</h1>
+      <header>
+        <h1 className="font-bold font-sans text-4xl md:text-5xl">Hello, I'm Batuhan</h1>
         <div className="flex items-center">
           <TechIcons />
-          <p className="font-mono font-semibold text-indigo-300 pt-[3px] pl-2 md:text-lg">Full-Stack Developer</p>
+          <AuroraText className="font-mono font-bold text-[22px] pl-3 pt-[3px]">Full-Stack Developer</AuroraText>
         </div>
-      </div>
-      <div>
+      </header>
+
+      <section aria-labelledby="about-heading">
         <TextH2>About</TextH2>
-        <p className="text-pretty text-primary leading-6.5">
-          Full-Stack Developer with 10+ years of experience, specialising in TypeScript, React, Next, Vue, Node.js, and SQL. Proven record of rebuilding customer-facing apps, designing RESTful APIs, and leading frontend teams for data-intensive applications. Focused on performance, scalable architecture, and measurable business outcomes.
+        <p className="text-primary text-[17px] leading-6.5">
+          { DESCRIPTION }
         </p>
-      </div>
-      <div>
+      </section>
+
+      <section aria-labelledby="work-heading">
         <TextH2>Work Experiences</TextH2>
         <Accordion type="single" collapsible>
           {WORK_EXP.map((exp, index) => (
@@ -40,61 +43,39 @@ export default function Home() {
                 </WorkTrigger>
               </AccordionTrigger>
               <AccordionContent>
-                <p className="text-base leading-6 ml-14 mb-6 -mt-1">
+                <p className="text-base text-primary leading-6 ml-14 mb-6 -mt-1">
                   {exp.description}
                 </p>
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
-      </div>
-      <div>
+      </section>
+
+      <section aria-labelledby="tech-stack-heading">
         <TextH2>Tech Stack</TextH2>
-        <div className="flex flex-col gap-4 mt-5">
-          <div>
-            <TextH4>Frontend</TextH4>
-            <div className="space-x-3 space-y-3">
-              <Badge icon="vscode-icons:file-type-typescript-official">TypeScript</Badge>
-              <Badge icon="vscode-icons:file-type-js-official">Javascript</Badge>
-              <Badge icon="vscode-icons:file-type-reactjs">React</Badge>
-              <Badge icon="vscode-icons:file-type-next">Next</Badge>
-              <Badge icon="vscode-icons:file-type-vue">Vue</Badge>
-              <Badge icon="vscode-icons:file-type-capacitor">Capacitor</Badge>
-              <Badge icon="logos:ionic-icon">Ionic</Badge>
-              <Badge icon="vscode-icons:file-type-tailwind">Tailwind</Badge>
+        <div className="mt-5 flex flex-col gap-4">
+          {TECH_SECTIONS.map(section => (
+            <div key={section.title}>
+              <TextH3>{section.title}</TextH3>
+              <div className="space-x-3 space-y-3">
+                {section.items.map(item => (
+                  <Badge key={item.label} icon={item.icon}>
+                    {item.label}
+                  </Badge>
+                ))}
+              </div>
             </div>
-          </div>
-          <div>
-            <TextH4>Backend</TextH4>
-            <div className="space-x-3 space-y-3">
-              <Badge icon="vscode-icons:file-type-node">Node</Badge>
-              <Badge icon="vscode-icons:file-type-bun">Bun</Badge>
-              <Badge icon="skill-icons:expressjs-dark">Express.js</Badge>
-              <Badge icon="vscode-icons:file-type-mongo">MongoDB</Badge>
-              <Badge icon="vscode-icons:file-type-pgsql">SQL</Badge>
-              <Badge icon="devicon:redis">Redis</Badge>
-              <Badge icon="vscode-icons:file-type-php3">PHP</Badge>
-            </div>
-          </div>
-          <div>
-            <TextH4>Toolbox</TextH4>
-            <div className="space-x-3 space-y-3">
-              <Badge icon="skill-icons:docker">Docker</Badge>
-              <Badge icon="skill-icons:aws-dark">AWS</Badge>
-              <Badge icon="logos:firebase">Firebase</Badge>
-              <Badge icon="logos:storyblok-icon">Storyblok</Badge>
-              <Badge icon="logos:terminal">Linux</Badge>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-      <Separator />
-      <div className="mb-30">
-        <div className="text-center mb-7">
-          <TextH2>Get in Touch</TextH2>
-        </div>
+      </section>
+
+      <Separator className="mt-10 mb-20" />
+
+      <section className="mb-30">
+        <TextH2 className="text-center mb-6 text-2xl md:text-3xl">Get in Touch</TextH2>
         <ContactCard />
-      </div>
+      </section>
       <Navbar />
     </main>
   )

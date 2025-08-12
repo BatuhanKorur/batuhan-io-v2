@@ -1,21 +1,16 @@
 import type { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 
-interface Props { children: ReactNode }
+interface Props { children: ReactNode, className?: string }
 
-export function TextH2({ children }: Props) {
+export function TextH2({ children, className, ...props }: Props) {
   return (
-    <h2 className="text-xl font-[725] tracking-wide font-mono text-foreground">{children}</h2>
+    <h2 className={cn('text-xl font-[725] tracking-wide font-mono text-foreground mb-1', className)} {...props}>{children}</h2>
   )
 }
 
 export function TextH3({ children }: Props) {
   return (
-    <h3 className="text-xl font-semibold">{children}</h3>
-  )
-}
-
-export function TextH4({ children }: Props) {
-  return (
-    <h4 className="uppercase font-semibold tracking-wider text-sm text-zinc-400 mb-1">{children}</h4>
+    <h3 className="uppercase font-semibold tracking-wider text-sm text-muted-foreground mb-1">{children}</h3>
   )
 }

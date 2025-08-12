@@ -50,9 +50,9 @@ export default function TechIcons() {
       }
     }
     return {
-      initial: { y: ENTER_Y_OFFSET, opacity: 0.8, filter: 'blur(6px)' },
+      initial: { y: ENTER_Y_OFFSET, opacity: 0.8, filter: 'blur(16px)' },
       animate: COMMON_ANIMATE,
-      exit: { y: EXIT_Y_OFFSET, opacity: 0.8, filter: 'blur(6px)' },
+      exit: { y: EXIT_Y_OFFSET, opacity: 0.8, filter: 'blur(16px)' },
       transition: {
         duration: 0.25,
         ease: [0.22, 0.61, 0.36, 1] as [number, number, number, number],
@@ -64,7 +64,7 @@ export default function TechIcons() {
     <div className="overflow-hidden flex items-center" aria-hidden="true">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div key={currentIndex} {...motionProps} className="will-change-[transform,filter,opacity]">
-          <Icon icon={currentIcon} className="size-5.5" />
+          <Icon icon={currentIcon} className="size-6.5" />
         </motion.div>
       </AnimatePresence>
     </div>
